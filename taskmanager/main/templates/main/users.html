@@ -1,0 +1,15 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Користувачі
+{% endblock %}
+
+{% block content %}
+    <h1>Користувачі які привітались</h1>
+    {% for el in names %}
+        <div class="alert alert-warning mt-2">
+            <h4>{{ el.first_name }} {{ el.last_name }}</h4>
+        </div>
+    {% endfor %}
+{% endblock %}
+
